@@ -1,0 +1,48 @@
+<!-- item_workout.xml -->
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:padding="12dp"
+    android:background="#1E1E1E"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/exerciseName"
+        android:text="Workout Name"
+        android:textSize="18sp"
+        android:textColor="#FFF"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:id="@+id/exerciseDetails"
+        android:text="Details"
+        android:textColor="#AAA"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="end"
+        android:paddingTop="8dp">
+
+        <Button
+            android:id="@+id/btnEdit"
+            android:text="Edit"
+            android:textSize="14sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <Button
+            android:id="@+id/btnDelete"
+            android:text="Delete"
+            android:textSize="14sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"/>
+    </LinearLayout>
+</LinearLayout>
+

@@ -1,0 +1,26 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <style name="Theme.FitnessApp" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="android:colorBackground">@color/background_dark</item>
+        <item name="android:textColor">@color/gold</item>
+        <item name="colorPrimary">@color/gold</item>
+        <!-- Default font for the application -->
+        <item name="android:fontFamily">@font/poppins_regular</item>
+
+        <!-- Define text appearances for different elements -->
+        <item name="textAppearanceHeadline1">@style/TextAppearance.App.Headline1</item>
+        <item name="textAppearanceBody1">@style/TextAppearance.App.Body1</item>
+        <item name="textAppearanceButton">@style/TextAppearance.App.Button</item>
+    </style>
+
+    <!-- Text Appearance Styles -->
+    <style name="TextAppearance.App.Headline1" parent="TextAppearance.MaterialComponents.Headline1">
+        <item name="android:fontFamily">@font/poppins_black</item>
+    </style>
+    <style name="TextAppearance.App.Body1" parent="TextAppearance.MaterialComponents.Body1">
+        <item name="android:fontFamily">@font/poppins_light</item>
+    </style>
+    <style name="TextAppearance.App.Button" parent="TextAppearance.MaterialComponents.Button">
+        <item name="android:fontFamily">@font/poppins_bold</item>
+    </style>
+
+</resources>

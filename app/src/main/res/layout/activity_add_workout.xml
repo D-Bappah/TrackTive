@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="24dp"
+    android:background="#121212">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/appTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="8dp"
+                android:text="TrackTive"
+                android:textColor="#FFD700"
+                android:textSize="28sp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/imageView3"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="200dp"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/tracktive" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="24dp"
+            android:text="Create a new workout plan"
+            android:textColor="#CCCCCC"
+            android:textSize="16sp" />
+
+        <EditText
+            android:id="@+id/editWorkoutName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="135dp"
+            android:layout_marginBottom="16dp"
+            android:backgroundTint="#FFD700"
+            android:hint="Workout Name"
+            android:inputType="text"
+            android:textColor="#FFFFFF"
+            android:textColorHint="#AAAAAA" />
+
+        <EditText
+            android:id="@+id/editSets"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Number of Sets"
+            android:inputType="number"
+            android:textColor="#FFFFFF"
+            android:textColorHint="#AAAAAA"
+            android:backgroundTint="#FFD700"
+            android:layout_marginBottom="16dp" />
+
+        <EditText
+            android:id="@+id/editReps"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Number of Reps"
+            android:inputType="number"
+            android:textColor="#FFFFFF"
+            android:textColorHint="#AAAAAA"
+            android:backgroundTint="#FFD700"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Time -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Select Time"
+            android:textColor="#FFFFFF"
+            android:layout_marginBottom="8dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="16dp">
+
+            <Spinner
+                android:id="@+id/spinnerHour"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:backgroundTint="#FFD700"
+                android:minHeight="50dp" />
+
+            <Spinner
+                android:id="@+id/spinnerMinute"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_weight="1"
+                android:backgroundTint="#FFD700"
+                android:minHeight="50dp" />
+
+            <Spinner
+                android:id="@+id/spinnerAmPm"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:minHeight="50dp"
+                android:spinnerMode="dropdown" />
+
+        </LinearLayout>
+
+        <!-- Date -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Select Date"
+            android:textColor="#FFFFFF"
+            android:layout_marginBottom="8dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="24dp">
+
+            <Spinner
+                android:id="@+id/spinnerDay"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:backgroundTint="#FFD700"
+                android:minHeight="50dp" />
+
+            <Spinner
+                android:id="@+id/spinnerMonth"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_weight="1"
+                android:backgroundTint="#FFD700"
+                android:minHeight="50dp" />
+
+            <Spinner
+                android:id="@+id/spinnerYear"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_weight="1"
+                android:backgroundTint="#FFD700"
+                android:minHeight="50dp" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btnSaveWorkout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Save Workout"
+            android:backgroundTint="#FFD700"
+            android:textColor="#000000"
+            android:paddingHorizontal="24dp"
+            android:paddingVertical="12dp"
+            android:layout_gravity="center" />
+
+    </LinearLayout>
+</ScrollView>

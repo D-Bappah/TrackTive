@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#121212">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- Upcoming Exercise Card -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/HomeTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                android:text="@string/App"
+                android:textSize="24sp" />
+
+            <ImageView
+                android:id="@+id/imageView2"
+                android:layout_width="223dp"
+                android:layout_height="69dp"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/tracktive" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/welcome"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:textSize="34sp" />
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="6dp"
+            app:cardBackgroundColor="#1E1E1E">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:id="@+id/upcomingTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Upcoming Exercise"
+                    android:textColor="#FFD700"
+                    android:textSize="24sp"
+                    android:textStyle="bold" />
+
+
+                <TextView
+                    android:id="@+id/date"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="May 20 2025"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/exerciseDetails"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="Push-ups\nSets: 3 | Reps: 15 | Time: 6:00 PM"
+                    android:textColor="#FFFFFF"
+                    android:textSize="18dp" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- Motivational Quote -->
+        <TextView
+            android:id="@+id/quote"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="“Discipline is choosing between what you want now and what you want most.”"
+            android:textColor="#CCCCCC"
+            android:textSize="16sp"
+            android:textAlignment="center"
+            android:layout_marginBottom="24dp"
+            android:padding="8dp" />
+
+        <!-- Add Schedule Button -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/addScheduleButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="24dp"
+            android:backgroundTint="#FFD700"
+            android:onClick="addSchedule"
+            android:text="+ Add New Workout Plan"
+
+            android:textColor="#121212"
+            android:textSize="16sp"
+            app:cornerRadius="16dp" />
+
+        <!-- Title for Exercise List -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:text="Your Workout Plans"
+            android:textColor="#FFD700"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <!-- RecyclerView for other exercises -->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/exerciseList"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="32dp"
+            tools:listitem="@layout/item_exercise" />
+
+    </LinearLayout>
+</ScrollView>
+
+
+
+
+
+
+    <!--<?xml version="1.0" encoding="utf-8"?>-->
+<!--<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"-->
+<!--    xmlns:app="http://schemas.android.com/apk/res-auto"-->
+<!--    xmlns:tools="http://schemas.android.com/tools"-->
+<!--    android:id="@+id/main"-->
+<!--    android:layout_width="match_parent"-->
+<!--    android:layout_height="match_parent"-->
+<!--    tools:context=".HomeActivity">-->
+
+<!--&lt;!&ndash;    <TextView&ndash;&gt;-->
+<!--&lt;!&ndash;        android:id="@+id/HomeTitle"&ndash;&gt;-->
+<!--&lt;!&ndash;        android:layout_width="wrap_content"&ndash;&gt;-->
+<!--&lt;!&ndash;        android:layout_height="wrap_content"&ndash;&gt;-->
+<!--&lt;!&ndash;        android:layout_marginStart="24dp"&ndash;&gt;-->
+<!--&lt;!&ndash;        android:layout_marginTop="24dp"&ndash;&gt;-->
+<!--&lt;!&ndash;        android:text="@string/App"&ndash;&gt;-->
+<!--&lt;!&ndash;        android:textSize="24sp"&ndash;&gt;-->
+<!--&lt;!&ndash;        app:layout_constraintStart_toStartOf="parent"&ndash;&gt;-->
+<!--&lt;!&ndash;        app:layout_constraintTop_toTopOf="parent" />&ndash;&gt;-->
+
+<!--&lt;!&ndash;    <TextView&ndash;&gt;-->
+<!--&lt;!&ndash;        android:id="@+id/welcome"&ndash;&gt;-->
+<!--&lt;!&ndash;        android:layout_width="wrap_content"&ndash;&gt;-->
+<!--&lt;!&ndash;        android:layout_height="wrap_content"&ndash;&gt;-->
+<!--&lt;!&ndash;        android:layout_marginTop="32dp"&ndash;&gt;-->
+<!--&lt;!&ndash;        android:text="@string/welcome"&ndash;&gt;-->
+<!--&lt;!&ndash;        android:textSize="35sp"&ndash;&gt;-->
+<!--&lt;!&ndash;        app:layout_constraintEnd_toEndOf="parent"&ndash;&gt;-->
+<!--&lt;!&ndash;        app:layout_constraintHorizontal_bias="0.317"&ndash;&gt;-->
+<!--&lt;!&ndash;        app:layout_constraintStart_toStartOf="parent"&ndash;&gt;-->
+<!--&lt;!&ndash;        app:layout_constraintTop_toBottomOf="@+id/HomeTitle" />&ndash;&gt;-->
+
+<!--&lt;!&ndash;    <androidx.constraintlayout.widget.ConstraintLayout&ndash;&gt;-->
+<!--&lt;!&ndash;        android:layout_width="300dp"&ndash;&gt;-->
+<!--&lt;!&ndash;        android:layout_height="350dp"&ndash;&gt;-->
+<!--&lt;!&ndash;        android:layout_marginTop="24dp"&ndash;&gt;-->
+<!--&lt;!&ndash;        app:layout_constraintEnd_toEndOf="parent"&ndash;&gt;-->
+<!--&lt;!&ndash;        app:layout_constraintStart_toStartOf="parent"&ndash;&gt;-->
+<!--&lt;!&ndash;        app:layout_constraintTop_toBottomOf="@+id/welcome">&ndash;&gt;-->
+
+<!--&lt;!&ndash;        <TextView&ndash;&gt;-->
+<!--&lt;!&ndash;            android:id="@+id/date"&ndash;&gt;-->
+<!--&lt;!&ndash;            android:layout_width="wrap_content"&ndash;&gt;-->
+<!--&lt;!&ndash;            android:layout_height="wrap_content"&ndash;&gt;-->
+<!--&lt;!&ndash;            android:layout_marginTop="16dp"&ndash;&gt;-->
+<!--&lt;!&ndash;            android:width="150dp"&ndash;&gt;-->
+<!--&lt;!&ndash;            android:text="Date"&ndash;&gt;-->
+<!--&lt;!&ndash;            app:layout_constraintEnd_toEndOf="parent"&ndash;&gt;-->
+<!--&lt;!&ndash;            app:layout_constraintHorizontal_bias="0.106"&ndash;&gt;-->
+<!--&lt;!&ndash;            app:layout_constraintStart_toStartOf="parent"&ndash;&gt;-->
+<!--&lt;!&ndash;            app:layout_constraintTop_toTopOf="parent" />&ndash;&gt;-->
+
+<!--&lt;!&ndash;        <TextView&ndash;&gt;-->
+<!--&lt;!&ndash;            android:id="@+id/textView6"&ndash;&gt;-->
+<!--&lt;!&ndash;            android:layout_width="wrap_content"&ndash;&gt;-->
+<!--&lt;!&ndash;            android:layout_height="wrap_content"&ndash;&gt;-->
+<!--&lt;!&ndash;            android:layout_marginTop="4dp"&ndash;&gt;-->
+<!--&lt;!&ndash;            android:text="Exercise"&ndash;&gt;-->
+<!--&lt;!&ndash;            app:layout_constraintEnd_toEndOf="parent"&ndash;&gt;-->
+<!--&lt;!&ndash;            app:layout_constraintHorizontal_bias="0.065"&ndash;&gt;-->
+<!--&lt;!&ndash;            app:layout_constraintStart_toStartOf="parent"&ndash;&gt;-->
+<!--&lt;!&ndash;            app:layout_constraintTop_toBottomOf="@+id/date" />&ndash;&gt;-->
+<!--&lt;!&ndash;    </androidx.constraintlayout.widget.ConstraintLayout>&ndash;&gt;-->
+<!--    -->
+<!--</androidx.constraintlayout.widget.ConstraintLayout>-->

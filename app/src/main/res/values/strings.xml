@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">Fitness Tracker</string>
+    <string name="Password_Hint">Password</string>
+    <string name="SignUpTitle">Sign Up</string>
+    <string name="Email_Hint">Email</string>
+    <string name="Username_Hint">Username</string>
+    <string name="App">TrackTive</string>
+    <string name="LoginTitle">Login</string>
+    <string name="Submit">Submit</string>
+    <string name="title_activity_home">HomeActivity</string>
+    <string name="title_home">Home</string>
+    <string name="title_schedule">Schedule</string>
+    <string name="welcome">Welcome back, </string>
+    <string name="title_settings">Settings</string>
+</resources>
